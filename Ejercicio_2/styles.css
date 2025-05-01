@@ -90,147 +90,148 @@ ul li {
     max-width: fit-content;
     transition: transform 0.3s ease-in-out;
 }
+/* Estilos para la sección de Equipos Favoritos */
+.equipos-fav {
+    text-align: center;
+    padding: 20px;
+}
+.equipos-fav h3 {
+    margin-bottom: 20px;
+}
+/* Contenedor que alinea la lista a la izquierda y el collage a la derecha */
+.equipos-fav .contenido {
+    display: flex;
+    justify-content: space-between; /* Separa la lista a la izquierda y las imágenes a la derecha */
+    align-items: flex-start;
+    gap: 30px; /* Espacio entre la lista y el collage */
+}
 
-ul li img {
-    width: 30px; /* Ajusta el tamaño de los logos */
+/* Estilos para la lista de equipos */
+.equipos-fav ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 45%; /* Limita el ancho de la lista */
+}
+
+.equipos-fav ul li {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Collage de imágenes (sección derecha) */
+.collage-derecha {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr); /* 3 imágenes por fila */
+    gap: 15px; /* Espacio entre las imágenes */
+    width: 45%; /* Limita el ancho del collage */
     height: auto;
-    margin-left: 10px;
-    vertical-align: middle;
 }
 
-/* Estilos para la lista de equipos deportivos */
-ul.teams li {
+/* Estilo para las imágenes dentro del collage */
+.collage-derecha img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 35%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse sobre las imágenes */
+.collage-derecha img:hover {
+    transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
+}
+/* Estilos para la sección de Películas Favoritas */
+.peliculas-fav {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    /* Personalización específica para los equipos deportivos */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Estilos para los items de la lista de equipos deportivos con los logos */
-ul.teams li:nth-child(1)::before {
-    content: '';
-    background-image: url('ruta/a/logo/cruzazul.png'); /* Logo Cruz Azul */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.peliculas-fav h3 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-ul.teams li:nth-child(2)::before {
-    content: '';
-    background-image: url('ruta/a/logo/realmadrid.png'); /* Logo Real Madrid */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+/* Estilo del collage de imágenes a la izquierda */
+.collage-izquierda {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr); /* 3 imágenes por fila */
+    gap: 15px; /* Espacio entre las imágenes */
+    width: 45%; /* Limita el ancho del collage */
+    height: auto;
 }
 
-ul.teams li:nth-child(4)::before {
-    content: '';
-    background-image: url('ruta/a/logo/steelers.png'); /* Logo Pittsburgh Steelers */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.collage-izquierda img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-ul.teams li:nth-child(5)::before {
-    content: '';
-    background-image: url('ruta/a/logo/penguins.png'); /* Logo Pittsburgh Penguins */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.collage-izquierda img:hover {
+    transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
 }
 
-ul.teams li:nth-child(7)::before {
-    content: '';
-    background-image: url('ruta/a/logo/springbrooks.png'); /* Logo Springbrooks */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-ul.teams li:nth-child(8)::before {
-    content: '';
-    background-image: url('ruta/a/logo/mclaren.png'); /* Logo McLaren Racing */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-ul.teams li:nth-child(9)::before {
-    content: '';
-    background-image: url('ruta/a/logo/ferrari.png'); /* Logo Ferrari Racing */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-/* Estilos para la lista de películas */
-ul.movies li {
+/* Estilo para la lista de películas */
+.peliculas-fav ul {
+    list-style: none;
+    padding-left: 0;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    /* Estilos específicos para la lista de películas */
+    flex-direction: column;
+    gap: 10px;
+    max-width: 50%;
 }
 
-ul.movies li:nth-child(1)::before {
-    content: '';
-    background-image: url('ruta/a/imagen/de/darth-vader.png'); /* Imagen de Darth Vader */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.peliculas-fav ul li {
+    font-size: 16px;
+    font-weight: 600;
+}
+/* Estilo para la sección de Música Favorita */
+.musica-fav {
+    padding: 20px;
+    text-align: center;
 }
 
-ul.movies li:nth-child(2)::before {
-    content: '';
-    background-image: url('ruta/a/imagen/de/godfather1.png'); /* Portada de Godfather 1 */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.musica-fav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
-ul.movies li:nth-child(4)::before {
-    content: '';
-    background-image: url('ruta/a/imagen/de/las2torres.png'); /* Portada de Las 2 Torres */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.musica-fav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-ul.movies li:nth-child(6)::before {
-    content: '';
-    background-image: url('ruta/a/imagen/de/aladin.png'); /* Portada Disney Original */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.musica-fav ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-ul.movies li:nth-child(8)::before {
-    content: '';
-    background-image: url('ruta/a/imagen/de/treasureplanet.png'); /* Portada de Treasure Planet */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.musica-fav ul li a:hover {
+    color: #007BFF;
+}
+
+.musica-fav ul li iframe {
+    width: 300px; /* Ajusta según el tamaño del reproductor */
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
