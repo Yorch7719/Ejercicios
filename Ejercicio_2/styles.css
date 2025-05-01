@@ -6,7 +6,231 @@ h1{
     padding: 20px 0;
 }
 p{
+    text-align: justify;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.fila-reversa {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+/* Estilo común para imágenes */
+.fila img, .fila-reversa img {
+    width: 300px;
+    height: auto;
+    margin: 0 20px;
+    border-radius: 20px;
+}
+
+/* Imagen centrada (Shuri y T'Challa) */
+.centrado {
     text-align: center;
-    margin: auto;
-    padding: 20px 0;
+    margin: 30px 0;
+}
+
+.centrado img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Opcional: efecto hover */
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Estilos generales para los h3 */
+h3 {
+    margin: 40px auto 20px;
+    background-color: goldenrod;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    letter-spacing: 1.1px;
+    display: inline-block;
+}
+
+/* Estilos comunes para las listas */
+ul {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+ul li {
+    background-color: #f4f4f4;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: fit-content;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li img {
+    width: 30px; /* Ajusta el tamaño de los logos */
+    height: auto;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Estilos para la lista de equipos deportivos */
+ul.teams li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    /* Personalización específica para los equipos deportivos */
+}
+
+/* Estilos para los items de la lista de equipos deportivos con los logos */
+ul.teams li:nth-child(1)::before {
+    content: '';
+    background-image: url('ruta/a/logo/cruzazul.png'); /* Logo Cruz Azul */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.teams li:nth-child(2)::before {
+    content: '';
+    background-image: url('ruta/a/logo/realmadrid.png'); /* Logo Real Madrid */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.teams li:nth-child(4)::before {
+    content: '';
+    background-image: url('ruta/a/logo/steelers.png'); /* Logo Pittsburgh Steelers */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.teams li:nth-child(5)::before {
+    content: '';
+    background-image: url('ruta/a/logo/penguins.png'); /* Logo Pittsburgh Penguins */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.teams li:nth-child(7)::before {
+    content: '';
+    background-image: url('ruta/a/logo/springbrooks.png'); /* Logo Springbrooks */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.teams li:nth-child(8)::before {
+    content: '';
+    background-image: url('ruta/a/logo/mclaren.png'); /* Logo McLaren Racing */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.teams li:nth-child(9)::before {
+    content: '';
+    background-image: url('ruta/a/logo/ferrari.png'); /* Logo Ferrari Racing */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Estilos para la lista de películas */
+ul.movies li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    /* Estilos específicos para la lista de películas */
+}
+
+ul.movies li:nth-child(1)::before {
+    content: '';
+    background-image: url('ruta/a/imagen/de/darth-vader.png'); /* Imagen de Darth Vader */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.movies li:nth-child(2)::before {
+    content: '';
+    background-image: url('ruta/a/imagen/de/godfather1.png'); /* Portada de Godfather 1 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.movies li:nth-child(4)::before {
+    content: '';
+    background-image: url('ruta/a/imagen/de/las2torres.png'); /* Portada de Las 2 Torres */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.movies li:nth-child(6)::before {
+    content: '';
+    background-image: url('ruta/a/imagen/de/aladin.png'); /* Portada Disney Original */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+ul.movies li:nth-child(8)::before {
+    content: '';
+    background-image: url('ruta/a/imagen/de/treasureplanet.png'); /* Portada de Treasure Planet */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
